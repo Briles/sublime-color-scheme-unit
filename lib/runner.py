@@ -137,7 +137,6 @@ def run_color_scheme_test(test, window, result_printer, code_coverage):
             assertion_fs = assertion_params.group('fs')
 
             expected = {}
-
             if assertion_fg is not None:
                 expected['foreground'] = assertion_fg
 

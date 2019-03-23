@@ -2,78 +2,90 @@ from .color_scheme import load_color_scheme_resource
 
 
 _default_syntaxes = [
-    'Packages/R/Rd (R Documentation).sublime-syntax',
-    'Packages/R/R Console.sublime-syntax',
-    'Packages/R/R.sublime-syntax',
-    'Packages/ShellScript/Shell-Unix-Generic.sublime-syntax',
-    'Packages/Groovy/Groovy.sublime-syntax',
     'Packages/Scala/Scala.sublime-syntax',
-    'Packages/Ruby/Ruby.sublime-syntax',
-    'Packages/Haskell/Haskell.sublime-syntax',
-    'Packages/Haskell/Literate Haskell.sublime-syntax',
-    'Packages/Textile/Textile.sublime-syntax',
-    'Packages/Makefile/Make Output.sublime-syntax',
-    'Packages/Makefile/Makefile.sublime-syntax',
-    'Packages/C++/C.sublime-syntax',
-    'Packages/C++/C++.sublime-syntax',
-    'Packages/HTML/HTML.sublime-syntax',
-    'Packages/Rails/HTML (Rails).sublime-syntax',
+    'Packages/ShellScript/Shell-Unix-Generic.sublime-syntax',
     'Packages/Rails/SQL (Rails).sublime-syntax',
-    'Packages/Rails/Ruby on Rails.sublime-syntax',
-    'Packages/Rails/Ruby Haml.sublime-syntax',
-    'Packages/Rails/JavaScript (Rails).sublime-syntax',
-    'Packages/Objective-C/Objective-C++.sublime-syntax',
-    'Packages/Objective-C/Objective-C.sublime-syntax',
-    'Packages/PHP/PHP.sublime-syntax',
-    'Packages/PHP/PHP Source.sublime-syntax',
-    'Packages/Markdown/MultiMarkdown.sublime-syntax',
-    'Packages/Markdown/Markdown.sublime-syntax',
-    'Packages/Graphviz/DOT.sublime-syntax',
-    'Packages/ASP/HTML-ASP.sublime-syntax',
-    'Packages/ASP/ASP.sublime-syntax',
-    'Packages/LaTeX/LaTeX Log.sublime-syntax',
-    'Packages/LaTeX/Bibtex.sublime-syntax',
-    'Packages/LaTeX/LaTeX.sublime-syntax',
-    'Packages/LaTeX/TeX.sublime-syntax',
-    'Packages/JavaScript/Regular Expressions (JavaScript).sublime-syntax',
-    'Packages/JavaScript/JSON.sublime-syntax',
-    'Packages/JavaScript/JavaScript.sublime-syntax',
-    'Packages/CSS/CSS.sublime-syntax',
-    'Packages/Matlab/Matlab.sublime-syntax',
-    'Packages/Rust/Cargo.sublime-syntax',
-    'Packages/Rust/Rust.sublime-syntax',
-    'Packages/Regular Expressions/RegExp.sublime-syntax',
-    'Packages/XML/XML.sublime-syntax',
-    'Packages/Lua/Lua.sublime-syntax',
-    'Packages/AppleScript/AppleScript.sublime-syntax',
-    'Packages/Java/Java.sublime-syntax',
-    'Packages/Java/JavaProperties.sublime-syntax',
-    'Packages/Java/JavaDoc.sublime-syntax',
-    'Packages/Java/Java Server Pages (JSP).sublime-syntax',
-    'Packages/ActionScript/ActionScript.sublime-syntax',
     'Packages/SQL/SQL.sublime-syntax',
-    'Packages/Python/Python.sublime-syntax',
-    'Packages/Python/Regular Expressions (Python).sublime-syntax',
-    'Packages/OCaml/camlp4.sublime-syntax',
-    'Packages/OCaml/OCamllex.sublime-syntax',
-    'Packages/OCaml/OCaml.sublime-syntax',
-    'Packages/OCaml/OCamlyacc.sublime-syntax',
-    'Packages/Erlang/HTML (Erlang).sublime-syntax',
-    'Packages/Erlang/Erlang.sublime-syntax',
-    'Packages/Diff/Diff.sublime-syntax',
-    'Packages/Go/Go.sublime-syntax',
-    'Packages/Pascal/Pascal.sublime-syntax',
+    'Packages/TCL/Tcl.sublime-syntax',
+    'Packages/LaTeX/TeX.sublime-syntax',
+    'Packages/Textile/Textile.sublime-syntax',
+    'Packages/XML/XML.sublime-syntax',
+    'Packages/YAML/YAML.sublime-syntax',
+    'Packages/ActionScript/ActionScript.sublime-syntax',
+    'Packages/AppleScript/AppleScript.sublime-syntax',
+    'Packages/ASP/ASP.sublime-syntax',
+    'Packages/ShellScript/Bash.sublime-syntax',
+    'Packages/Batch File/Batch File.sublime-syntax',
+    'Packages/LaTeX/Bibtex.sublime-syntax',
     'Packages/C#/Build.sublime-syntax',
     'Packages/C#/C#.sublime-syntax',
-    'Packages/Perl/Perl.sublime-syntax',
-    'Packages/D/D.sublime-syntax',
-    'Packages/RestructuredText/reStructuredText.sublime-syntax',
-    'Packages/TCL/HTML (Tcl).sublime-syntax',
-    'Packages/TCL/Tcl.sublime-syntax',
-    'Packages/YAML/YAML.sublime-syntax',
-    'Packages/Batch File/Batch File.sublime-syntax',
+    'Packages/C++/C.sublime-syntax',
+    'Packages/C++/C++.sublime-syntax',
+    'Packages/OCaml/camlp4.sublime-syntax',
+    'Packages/Rust/Cargo.sublime-syntax',
     'Packages/Clojure/Clojure.sublime-syntax',
+    'Packages/ShellScript/commands-builtin-shell-bash.sublime-syntax',
+    'Packages/CSS/CSS.sublime-syntax',
+    'Packages/D/D.sublime-syntax',
+    'Packages/Diff/Diff.sublime-syntax',
+    'Packages/D/DMD Output.sublime-syntax',
+    'Packages/Graphviz/DOT.sublime-syntax',
+    'Packages/Erlang/Erlang.sublime-syntax',
+    'Packages/Git Formats/Git Attributes.sublime-syntax',
+    'Packages/Git Formats/Git Commit.sublime-syntax',
+    'Packages/Git Formats/Git Common.sublime-syntax',
+    'Packages/Git Formats/Git Config.sublime-syntax',
+    'Packages/Git Formats/Git Ignore.sublime-syntax',
+    'Packages/Git Formats/Git Link.sublime-syntax',
+    'Packages/Git Formats/Git Log.sublime-syntax',
+    'Packages/Git Formats/Git Rebase.sublime-syntax',
+    'Packages/Go/Go.sublime-syntax',
+    'Packages/Groovy/Groovy.sublime-syntax',
+    'Packages/Haskell/Haskell.sublime-syntax',
+    'Packages/Erlang/HTML (Erlang).sublime-syntax',
+    'Packages/Rails/HTML (Rails).sublime-syntax',
+    'Packages/TCL/HTML (Tcl).sublime-syntax',
+    'Packages/HTML/HTML.sublime-syntax',
+    'Packages/ASP/HTML-ASP.sublime-syntax',
+    'Packages/Java/Java Server Pages (JSP).sublime-syntax',
+    'Packages/Java/Java.sublime-syntax',
+    'Packages/Java/JavaDoc.sublime-syntax',
+    'Packages/Java/JavaProperties.sublime-syntax',
+    'Packages/Rails/JavaScript (Rails).sublime-syntax',
+    'Packages/JavaScript/JavaScript.sublime-syntax',
+    'Packages/JavaScript/JSON.sublime-syntax',
+    'Packages/LaTeX/LaTeX Log.sublime-syntax',
+    'Packages/LaTeX/LaTeX.sublime-syntax',
     'Packages/Lisp/Lisp.sublime-syntax',
+    'Packages/Haskell/Literate Haskell.sublime-syntax',
+    'Packages/Lua/Lua.sublime-syntax',
+    'Packages/Makefile/Make Output.sublime-syntax',
+    'Packages/Makefile/Makefile.sublime-syntax',
+    'Packages/Markdown/Markdown.sublime-syntax',
+    'Packages/Matlab/Matlab.sublime-syntax',
+    'Packages/Markdown/MultiMarkdown.sublime-syntax',
+    'Packages/Objective-C/Objective-C.sublime-syntax',
+    'Packages/Objective-C/Objective-C++.sublime-syntax',
+    'Packages/OCaml/OCaml.sublime-syntax',
+    'Packages/OCaml/OCamllex.sublime-syntax',
+    'Packages/OCaml/OCamlyacc.sublime-syntax',
+    'Packages/Pascal/Pascal.sublime-syntax',
+    'Packages/Perl/Perl.sublime-syntax',
+    'Packages/PHP/PHP Source.sublime-syntax',
+    'Packages/PHP/PHP.sublime-syntax',
+    'Packages/Python/Python.sublime-syntax',
+    'Packages/R/R Console.sublime-syntax',
+    'Packages/R/R.sublime-syntax',
+    'Packages/R/Rd (R Documentation).sublime-syntax',
+    'Packages/Regular Expressions/RegExp.sublime-syntax',
+    'Packages/JavaScript/Regular Expressions (JavaScript).sublime-syntax',
+    'Packages/PHP/Regular Expressions (PHP).sublime-syntax',
+    'Packages/Python/Regular Expressions (Python).sublime-syntax',
+    'Packages/RestructuredText/reStructuredText.sublime-syntax',
+    'Packages/Rails/Ruby Haml.sublime-syntax',
+    'Packages/Rails/Ruby on Rails.sublime-syntax',
+    'Packages/Ruby/Ruby.sublime-syntax',
+    'Packages/Rust/Rust.sublime-syntax',
 ]
 
 _minimal_syntaxes = [
@@ -90,27 +102,30 @@ _minimal_syntaxes = [
 ]
 
 _minimal_scopes = [
-    'comment',
-    'constant',
-    'constant.character.escape',
-    'constant.language',
-    'constant.numeric',
     'entity.name',
+    'entity.other.inherited-class',
     'entity.name.section',
     'entity.name.tag',
     'entity.other.attribute-name',
-    'entity.other.inherited-class',
-    'invalid',
+    'variable',
+    'variable.language',
+    'variable.parameter',
+    'variable.function',
+    'constant',
+    'constant.numeric',
+    'constant.language',
+    'constant.character.escape',
+    'storage.type',
+    'storage.modifier',
+    'support',
     'keyword',
     'keyword.control',
     'keyword.operator',
-    'storage.modifier',
-    'storage.type',
+    'keyword.declaration',
     'string',
-    'variable',
-    'variable.function',
-    'variable.language',
-    'variable.parameter',
+    'comment',
+    'invalid',
+    'invalid.deprecated',
 ]
 
 
@@ -151,34 +166,37 @@ class Coverage():
 
         report_data = []
         for color_scheme, syntaxes in cs_tested_syntaxes.items():
-            color_scheme_plist = load_color_scheme_resource(color_scheme)
+            color_scheme_json = load_color_scheme_resource(color_scheme)
             syntaxes = set(syntaxes)
             colors = set()
             scopes = set()
             styles = set()
+            color_scheme_variables = color_scheme_json['variables']
 
-            for struct in color_scheme_plist['settings']:
+            for struct in color_scheme_json['rules']:
                 if 'scope' in struct:
                     for scope in struct['scope'].split(','):
                         scopes.add(scope.strip())
-                else:
-                    if 'settings' in struct:
-                        for k, v in struct['settings'].items():
-                            if v.startswith('#'):
-                                colors.add(v.lower())
-                            else:
-                                styles.add(v)
 
-                if 'settings' in struct:
-                    if 'foreground' in struct['settings']:
-                        colors.add(struct['settings']['foreground'].lower())
+                if 'foreground' in struct:
+                    fg = struct['foreground']
+                    color = fg
+                    if fg[4:-1] in color_scheme_variables:
+                        color = color_scheme_variables[fg[4:-1]]
 
-                    if 'background' in struct['settings']:
-                        colors.add(struct['settings']['background'].lower())
+                    colors.add(color.lower())
 
-                    if 'fontStyle' in struct['settings']:
-                        if struct['settings']['fontStyle']:
-                            styles.add(struct['settings']['fontStyle'])
+                if 'background' in struct:
+                    bg = struct['background']
+                    color = bg
+                    if bg[4:-1] in color_scheme_variables:
+                        color = color_scheme_variables[bg[4:-1]]
+
+                    colors.add(color.lower())
+
+                if 'font_style' in struct:
+                    if struct['font_style']:
+                        styles.add(struct['font_style'])
 
             report_data.append({
                 'color_scheme': color_scheme,
