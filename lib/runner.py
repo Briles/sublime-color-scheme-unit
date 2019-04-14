@@ -22,13 +22,13 @@ __version__ = "1.10.0"
 __version_info__ = (1, 10, 0)
 
 _color_test_params_compiled_pattern = re.compile(
-    '^(?:(?:\\<\\?php )?(?://|#|\\/\\*|\\<\\!--|--)\\s*)?'
+    '^(?:(?:\\<\\?php )?(?://|#|\\{\\{--|\\/\\*|\\<\\!--|--)\\s*)?'
     'COLOR SCHEME TEST "(?P<color_scheme>[^"]+)"'
     '(?:(?P<skip_if_not_syntax> SKIP IF NOT)? "(?P<syntax_name>[^"]+)")?'
-    '(?:\\s*(?:--\\>|\\?\\>|\\*\\/))?')
+    '(?:\\s*(?:--\\>|\\?\\>|--\\}\\}|\\*\\/))?')
 
 _color_test_assertion_compiled_pattern = re.compile(
-    '^\\s*(//|#|\\/\\*|\\<\\!--|--)\\s*'
+    '^\\s*(//|#|\\{\\{--|\\/\\*|\\<\\!--|--)\\s*'
     '(?P<repeat>\\^+)'
     '(?: fg=(?P<fg>[^ ]+)?)?'
     '(?: bg=(?P<bg>[^ ]+)?)?'
@@ -116,7 +116,7 @@ def run_color_scheme_test(test, window, result_printer, code_coverage):
         consecutive_test_lines = 0
         has_failed_assertion = False
         for line_number, line in enumerate(test_content.splitlines()):
-            assertion_params = _color_test_assertion_compiled_pattern.match(line.lower().rstrip(' -->').rstrip(' */'))
+            assertion_params = _color_test_assertion_compiled_pattern.match(line.lower().rstrip(' -->').rstrip(' */').rstrip(' --\\}\\}'))
             if not assertion_params:
                 consecutive_test_lines = 0
                 continue
